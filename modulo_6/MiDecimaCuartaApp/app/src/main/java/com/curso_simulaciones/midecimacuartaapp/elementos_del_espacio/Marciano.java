@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 
 public class Marciano extends Extraterrestre {
+    private int colorOjos;
     /**
      * Constructor por defecto
      * del marciano con &quot;centroide&quot; en (0,0)
@@ -23,6 +24,9 @@ public class Marciano extends Extraterrestre {
         super(posicionCentroideX, posicionCentroideY);
     }
 
+    public void setColorOjos(int colorOjos){
+        this.colorOjos = colorOjos;
+    }
     //se implementó este método dque en su clase made es abstracto
     public void dibujese(Canvas canvas, Paint pincel) {
 //estilo del pindel
@@ -43,29 +47,27 @@ public class Marciano extends Extraterrestre {
         float radio = 50f;
         pincel.setStyle(Paint.Style.FILL);
         canvas.drawCircle(posicionCentroideX, posicionCentroideY, radio, pincel);
-        pincel.setColor(Color.BLACK);
-//dibujar circunferencia de la cara del marciano
-        pincel.setStyle(Paint.Style.STROKE);
-        canvas.drawCircle(posicionCentroideX, posicionCentroideY, radio, pincel);
 
 //dibujar los ojitos del marcianito
         float separacion = 0.3f * radio;
-        float posicionOjoCentroIzquierdoX = posicionCentroideX - separacion;
+        float posicionOjoCentroIzquierdoX = posicionCentroideX - 1.1f*separacion;
         float posicionOjoCentroIzquierdoY = posicionCentroideY - separacion;
-        float posicionOjoCentroDerechoX = posicionCentroideX + separacion;
+        float posicionOjoCentroDerechoX = posicionCentroideX + 1.1f*separacion;
         float posicionOjoCentroDerechoY = posicionCentroideY - separacion;
         pincel.setStyle(Paint.Style.FILL);
         pincel.setColor(Color.WHITE);
-        canvas.drawCircle(posicionOjoCentroIzquierdoX, posicionOjoCentroIzquierdoY,
-                0.2f * radio, pincel);
-        canvas.drawCircle(posicionOjoCentroDerechoX, posicionOjoCentroDerechoY,
-                0.2f * radio, pincel);
+        canvas.drawOval(posicionOjoCentroIzquierdoX-0.28f*radio,
+                posicionOjoCentroIzquierdoY-0.3f*radio,posicionOjoCentroIzquierdoX+0.28f*radio,
+                posicionOjoCentroIzquierdoY+0.3f*radio,pincel);
+        canvas.drawOval(posicionOjoCentroDerechoX+0.28f*radio,
+                posicionOjoCentroDerechoY-0.3f*radio,posicionOjoCentroDerechoX-0.28f*radio,
+                posicionOjoCentroDerechoY+0.3f*radio,pincel);
 //dibujar la pupila de los ojitos
         pincel.setColor(color);
         canvas.drawCircle(posicionOjoCentroIzquierdoX, posicionOjoCentroIzquierdoY,
-                0.1f * radio, pincel);
+                0.07f * radio, pincel);
         canvas.drawCircle(posicionOjoCentroDerechoX, posicionOjoCentroDerechoY,
-                0.1f * radio, pincel);
+                0.07f * radio, pincel);
 //dibujar la boquita del marcianito
         float altoBoca = 0.2f * radio;
         float anchoBoca = 0.5f * radio;
@@ -81,14 +83,14 @@ public class Marciano extends Extraterrestre {
 //dibujar las orejitas del marcianito
 //orejita derecha
         float x_i_oreja_derecha = posicionOjoCentroDerechoX + 0.1f * radio;
-        float y_i_oreja_derecha = posicionOjoCentroDerechoY - 0.2f * radio;
+        float y_i_oreja_derecha = posicionOjoCentroDerechoY - 0.3f * radio;
         float x_s_oreja_derecha = posicionCentroideX + radio;
         float y_s_oreja_derecha = posicionCentroideY - 2f * radio;
 //orejita izaquierda
 
 
         float x_i_oreja_izquierda = posicionOjoCentroIzquierdoX - 0.1f * radio;
-        float y_i_oreja_izquierda = posicionOjoCentroIzquierdoY - 0.2f * radio;
+        float y_i_oreja_izquierda = posicionOjoCentroIzquierdoY - 0.3f * radio;
         float x_s_oreja_izquierda = posicionCentroideX - radio;
         float y_s_oreja_izquierda = posicionCentroideY - 2f * radio;
         pincel.setColor(color);
