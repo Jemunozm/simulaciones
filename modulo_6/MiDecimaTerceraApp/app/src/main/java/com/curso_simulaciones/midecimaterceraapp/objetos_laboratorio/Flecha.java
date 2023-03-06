@@ -184,6 +184,5 @@ public class Flecha extends ObjetoLaboratorio {
         //restaurar el canvas
         canvas.restore();
 
-
     }
 }

@@ -56,6 +56,5 @@ public class EstrellaFija extends ObjetoEspacial{
 
         //restaurar el canvas
         canvas.restore();
-
     }
 }

@@ -201,7 +201,6 @@ public class ActividadPrincipalMiDecimaCuartaApp extends Activity implements Run
         estrella_4 = new EstrellaFija(x_5,y_5,longitud_4);
         estrella_4.setColor(Color.rgb(255, 232, 0));
 
-
         float longitud_5 = CR.pcApxL(4);
         float x_6 = CR.pcApxX(80);
         float y_6 = CR.pcApxY(20);
@@ -233,7 +232,6 @@ public class ActividadPrincipalMiDecimaCuartaApp extends Activity implements Run
 
     }
 
-
     /*
     Cambia el estado de movimiento de los objetos espaciales
     -X esta en porcentaje del annco del canvas
@@ -242,7 +240,6 @@ public class ActividadPrincipalMiDecimaCuartaApp extends Activity implements Run
      entre el alto y el ancho del canvas
     */
     private void cambiarEstadosEscenaPizarra(float tiempo) {
-
 
         //modelo de la marciano_1
         //movimiento parabólico
@@ -271,8 +268,6 @@ public class ActividadPrincipalMiDecimaCuartaApp extends Activity implements Run
         float fase_en_radianes = (float) (2 * Math.PI * frecuencia * tiempo);
         float deplazamiento_V_y = (float) (amplitud * (Math.sin(fase_en_radianes)));
         venusiano_1.mover(desplazamiento_V_x , deplazamiento_V_y);
-
-
 
     }
 
