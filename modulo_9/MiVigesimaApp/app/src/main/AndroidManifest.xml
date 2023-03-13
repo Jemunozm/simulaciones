@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.curso_simulaciones.mivigesimaapp">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MiVigesimaApp"
+        tools:targetApi="31" >
+
+        <!--Declarar la actividad que lanzara la aplicación-->
+        <activity android:name="com.curso_simulaciones.mivigesimaapp.ActividadPrincipalMiVigesimaApp"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:configChanges="screenSize|orientation"
+            android:screenOrientation="landscape"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!--declarando otras actividades-->
+        <activity
+            android:name=".controlador.ActividadControladora"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="landscape">
+        </activity>
+
+
+    </application>
+
+
+</manifest>
