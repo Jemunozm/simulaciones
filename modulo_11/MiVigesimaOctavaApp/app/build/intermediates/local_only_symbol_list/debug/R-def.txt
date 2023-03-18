@@ -1,0 +1,24 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable a
+drawable ax
+drawable ay
+drawable az
+drawable consultar
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable imagen_entrada_app_28
+drawable salir
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Theme.MiVigesimaOctavaApp
+xml backup_rules
+xml data_extraction_rules

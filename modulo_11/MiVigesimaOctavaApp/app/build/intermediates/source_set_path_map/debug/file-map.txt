@@ -1,0 +1,11 @@
+com.curso_simulaciones.mivigesimaoctavaapp-core-1.0.0-0 C:\Users\Usuario\.gradle\caches\transforms-3\0caedb9e5bc6e504fc77c4b9fbb4b681\transformed\core-1.0.0\res
+com.curso_simulaciones.mivigesimaoctavaapp-appcompat-1.0.0-1 C:\Users\Usuario\.gradle\caches\transforms-3\b67f4328b4efe183ac5e80d64fdf86af\transformed\appcompat-1.0.0\res
+com.curso_simulaciones.mivigesimaoctavaapp-coordinatorlayout-1.0.0-2 C:\Users\Usuario\.gradle\caches\transforms-3\cf2d9462f68b160079d2c58bb5765b2c\transformed\coordinatorlayout-1.0.0\res
+com.curso_simulaciones.mivigesimaoctavaapp-pngs-3 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\build\generated\res\pngs\debug
+com.curso_simulaciones.mivigesimaoctavaapp-resValues-4 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\build\generated\res\resValues\debug
+com.curso_simulaciones.mivigesimaoctavaapp-rs-5 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\build\generated\res\rs\debug
+com.curso_simulaciones.mivigesimaoctavaapp-packageDebugResources-6 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.curso_simulaciones.mivigesimaoctavaapp-packageDebugResources-7 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\build\intermediates\merged_res\debug
+com.curso_simulaciones.mivigesimaoctavaapp-debug-9 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\src\debug\res
+com.curso_simulaciones.mivigesimaoctavaapp-main-10 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\src\main\res

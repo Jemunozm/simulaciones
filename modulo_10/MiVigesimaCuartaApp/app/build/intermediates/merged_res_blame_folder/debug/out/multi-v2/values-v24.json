@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.curso_simulaciones.mivigesimacuartaapp-mergeDebugResources-6:/values-v24/values-v24.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Usuario\\.gradle\\caches\\transforms-3\\4a288c2e0b4e80163f908c9a00135d0d\\transformed\\appcompat-v7-28.0.0\\res\\values-v24\\values-v24.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,212",
+                        "endColumns": "156,134",
+                        "endOffsets": "207,342"
+                    }
+                }
+            ]
+        }
+    ]
+}

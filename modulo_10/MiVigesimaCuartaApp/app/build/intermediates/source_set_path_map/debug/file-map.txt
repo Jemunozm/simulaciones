@@ -1,0 +1,11 @@
+com.curso_simulaciones.mivigesimacuartaapp-support-compat-28.0.0-0 C:\Users\Usuario\.gradle\caches\transforms-3\222d3d96047e18a39d15dd7f96eb4869\transformed\support-compat-28.0.0\res
+com.curso_simulaciones.mivigesimacuartaapp-coordinatorlayout-28.0.0-1 C:\Users\Usuario\.gradle\caches\transforms-3\320d88fd95f589b47fc113114402e012\transformed\coordinatorlayout-28.0.0\res
+com.curso_simulaciones.mivigesimacuartaapp-appcompat-v7-28.0.0-2 C:\Users\Usuario\.gradle\caches\transforms-3\4a288c2e0b4e80163f908c9a00135d0d\transformed\appcompat-v7-28.0.0\res
+com.curso_simulaciones.mivigesimacuartaapp-pngs-3 D:\University\2023-1\Simulaciones\modulo_10\MiVigesimaCuartaApp\app\build\generated\res\pngs\debug
+com.curso_simulaciones.mivigesimacuartaapp-resValues-4 D:\University\2023-1\Simulaciones\modulo_10\MiVigesimaCuartaApp\app\build\generated\res\resValues\debug
+com.curso_simulaciones.mivigesimacuartaapp-rs-5 D:\University\2023-1\Simulaciones\modulo_10\MiVigesimaCuartaApp\app\build\generated\res\rs\debug
+com.curso_simulaciones.mivigesimacuartaapp-packageDebugResources-6 D:\University\2023-1\Simulaciones\modulo_10\MiVigesimaCuartaApp\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.curso_simulaciones.mivigesimacuartaapp-packageDebugResources-7 D:\University\2023-1\Simulaciones\modulo_10\MiVigesimaCuartaApp\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.curso_simulaciones.mivigesimacuartaapp-merged_res-8 D:\University\2023-1\Simulaciones\modulo_10\MiVigesimaCuartaApp\app\build\intermediates\merged_res\debug
+com.curso_simulaciones.mivigesimacuartaapp-debug-9 D:\University\2023-1\Simulaciones\modulo_10\MiVigesimaCuartaApp\app\src\debug\res
+com.curso_simulaciones.mivigesimacuartaapp-main-10 D:\University\2023-1\Simulaciones\modulo_10\MiVigesimaCuartaApp\app\src\main\res

@@ -1,0 +1,98 @@
+[
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/drawable_salir.png.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/drawable/salir.png"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/drawable_ax.png.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/drawable/ax.png"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/xml_backup_rules.xml.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/xml_data_extraction_rules.xml.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-pngs-3:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/drawable_ay.png.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/drawable/ay.png"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/drawable_consultar.png.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/drawable/consultar.png"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/drawable_imagen_entrada_app_28.png.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/drawable/imagen_entrada_app_28.png"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/drawable_a.png.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/drawable/a.png"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-anydpi-v33_ic_launcher.xml.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-anydpi-v33/ic_launcher.xml"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.curso_simulaciones.mivigesimaoctavaapp-merged_res-8:/drawable_az.png.flat",
+        "source": "com.curso_simulaciones.mivigesimaoctavaapp-main-10:/drawable/az.png"
+    }
+]
