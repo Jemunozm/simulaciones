@@ -1,5 +1,0 @@
-com.curso_simulaciones.mivigesimaoctavaapp.test.app-androidTest-0 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\build\generated\res\resValues\androidTest\debug
-com.curso_simulaciones.mivigesimaoctavaapp.test.app-androidTest-1 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\build\generated\res\rs\androidTest\debug
-com.curso_simulaciones.mivigesimaoctavaapp.test.app-mergeDebugAndroidTestResources-2 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
-com.curso_simulaciones.mivigesimaoctavaapp.test.app-mergeDebugAndroidTestResources-3 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
-com.curso_simulaciones.mivigesimaoctavaapp.test.app-merged_res-4 D:\University\2023-1\Simulaciones\modulo_11\MiVigesimaOctavaApp\app\build\intermediates\merged_res\debugAndroidTest
