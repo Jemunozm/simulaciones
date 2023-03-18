@@ -1,0 +1,801 @@
+warning: in the working copy of 'modulo_11/MiVigesimaOctavaApp/app/build.gradle', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'modulo_11/MiVigesimaOctavaApp/app/src/androidTest/java/com/curso_simulaciones/mivigesimaoctavaapp/ExampleInstrumentedTest.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'modulo_11/MiVigesimaOctavaApp/gradle.properties', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'modulo_11/MiVigesimaOctavaApp/settings.gradle', LF will be replaced by CRLF the next time Git touches it
+[1mdiff --git a/modulo_10/MiVigesimaCuartaApp/.idea/gradle.xml b/modulo_10/MiVigesimaCuartaApp/.idea/gradle.xml[m
+[1mindex a9f4e52..a2d7c21 100644[m
+[1m--- a/modulo_10/MiVigesimaCuartaApp/.idea/gradle.xml[m
+[1m+++ b/modulo_10/MiVigesimaCuartaApp/.idea/gradle.xml[m
+[36m@@ -1,5 +1,6 @@[m
+ <?xml version="1.0" encoding="UTF-8"?>[m
+ <project version="4">[m
+[32m+[m[32m  <component name="GradleMigrationSettings" migrationVersion="1" />[m
+   <component name="GradleSettings">[m
+     <option name="linkedExternalProjectsSettings">[m
+       <GradleProjectSettings>[m
+[1mdiff --git a/modulo_10/MiVigesimaCuartaApp/app/src/main/java/com/curso_simulaciones/mivigesimacuartaapp/ActividadPrincipalMiVigesimaCuartaApp.java b/modulo_10/MiVigesimaCuartaApp/app/src/main/java/com/curso_simulaciones/mivigesimacuartaapp/ActividadPrincipalMiVigesimaCuartaApp.java[m
+[1mindex 4ceb3e3..8b650dd 100644[m
+[1m--- a/modulo_10/MiVigesimaCuartaApp/app/src/main/java/com/curso_simulaciones/mivigesimacuartaapp/ActividadPrincipalMiVigesimaCuartaApp.java[m
+[1m+++ b/modulo_10/MiVigesimaCuartaApp/app/src/main/java/com/curso_simulaciones/mivigesimacuartaapp/ActividadPrincipalMiVigesimaCuartaApp.java[m
+[36m@@ -1,2 +1,211 @@[m
+[31m-package com.curso_simulaciones.mivigesimacuartaapp;public class ActividadPrincipalMiVigesimaCuartaApp {[m
+[32m+[m[32mpackage com.curso_simulaciones.mivigesimacuartaapp;[m
+[32m+[m
+[32m+[m[32mimport android.app.Activity;[m
+[32m+[m[32mimport android.content.Intent;[m
+[32m+[m[32mimport android.graphics.Color;[m
+[32m+[m[32mimport android.graphics.drawable.Drawable;[m
+[32m+[m[32mimport android.os.Bundle;[m
+[32m+[m[32mimport android.util.DisplayMetrics;[m
+[32m+[m[32mimport android.view.Gravity;[m
+[32m+[m[32mimport android.view.View;[m
+[32m+[m[32mimport android.view.ViewGroup;[m
+[32m+[m[32mimport android.widget.LinearLayout;[m
+[32m+[m
+[32m+[m[32mimport com.curso_simulaciones.mivigesimacuartaapp.controlador.ActividadControladora;[m
+[32m+[m[32mimport com.curso_simulaciones.mivigesimacuartaapp.datos.AlmacenDatosRAM;[m
+[32m+[m[32mimport com.curso_simulaciones.mivigesimacuartaapp.utilidades.Boton;[m
+[32m+[m
+[32m+[m[32mpublic class ActividadPrincipalMiVigesimaCuartaApp extends Activity {[m
+[32m+[m
+[32m+[m[32m    private int tamanoLetraResolucionIncluida;[m
+[32m+[m
+[32m+[m[32m    private Boton entrar, salir;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    public void onCreate(Bundle savedInstanceState) {[m
+[32m+[m[32m        super.onCreate(savedInstanceState);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        gestionarResolucion();[m
+[32m+[m
+[32m+[m[32m        //Creación elementosGUI[m
+[32m+[m[32m        creacionElementosGui();[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        ViewGroup.LayoutParams linear_layou_principal = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);[m
+[32m+[m[32m        this.setContentView(crearGUI(), linear_layou_principal);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        eventos();[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    }//fin onCreate[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    /*Método auxiliar para asuntos de resolución*/[m
+[32m+[m[32m    private void gestionarResolucion() {[m
+[32m+[m
+[32m+[m[32m        //independencia de la resolución de la pantalla[m
+[32m+[m[32m        DisplayMetrics displayMetrics = this.getApplicationContext().getResources().getDisplayMetrics();[m
+[32m+[m[32m        int alto = displayMetrics.heightPixels;[m
+[32m+[m[32m        int ancho = displayMetrics.widthPixels;[m
+[32m+[m[32m        int dimensionReferencia;[m
+[32m+[m
+[32m+[m[32m        //tomar el menor valor entre alto y ancho de pantalla[m
+[32m+[m[32m        if (alto > ancho) {[m
+[32m+[m
+[32m+[m[32m            dimensionReferencia = ancho;[m
+[32m+[m[32m        } else {[m
+[32m+[m
+[32m+[m[32m            dimensionReferencia = alto;[m
+[32m+[m[32m        }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //una estimación de un buen tamaño[m
+[32m+[m[32m        int tamanoLetra = dimensionReferencia / 20;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //tamano de letra para usar acomodado a la resolución de pantalla[m
+[32m+[m[32m        tamanoLetraResolucionIncluida = (int) (tamanoLetra / displayMetrics.scaledDensity);[m
+[32m+[m
+[32m+[m[32m        //guardar en el almacen de datos para que otras clases la accedan fácilmente[m
+[32m+[m[32m        AlmacenDatosRAM.tamanoLetraResolucionIncluida = tamanoLetraResolucionIncluida;[m
+[32m+[m
+[32m+[m[32m        //guardar en almacen annho y alto de pantalla:[m
+[32m+[m[32m        //este cálculo está con dispoitivo móvil[m
+[32m+[m[32m        //en orientación portrait[m
+[32m+[m[32m        AlmacenDatosRAM.ancho_pantalla =ancho;[m
+[32m+[m[32m        AlmacenDatosRAM.alto_pantalla =alto;[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    //Creación elementosGUI[m
+[32m+[m[32m    private void creacionElementosGui() {[m
+[32m+[m
+[32m+[m[32m        //aceptar = new Button(this);[m
+[32m+[m[32m        entrar = new Boton(this);[m
+[32m+[m[32m        entrar.setImagen(R.drawable.entrar);[m
+[32m+[m[32m        entrar.setText(" ");[m
+[32m+[m
+[32m+[m[32m        salir = new Boton(this);[m
+[32m+[m[32m        salir.setImagen(R.drawable.salir);[m
+[32m+[m[32m        salir.setText(" ");[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    private LinearLayout crearGUI(){[m
+[32m+[m
+[32m+[m[32m        //LinearLayoutPrincipal[m
+[32m+[m[32m        LinearLayout linear_layout_principal  = new LinearLayout(this);[m
+[32m+[m[32m        linear_layout_principal.setOrientation(LinearLayout.VERTICAL);[m
+[32m+[m[32m        linear_layout_principal.setGravity(Gravity.CENTER_HORIZONTAL);[m
+[32m+[m[32m        linear_layout_principal.setGravity(Gravity.FILL);[m
+[32m+[m[32m        linear_layout_principal.setBackgroundColor(Color.WHITE);[m
+[32m+[m[32m        linear_layout_principal.setWeightSum(10);[m
+[32m+[m
+[32m+[m[32m        //fondo primera fila[m
+[32m+[m[32m        Drawable fondo = getResources().getDrawable(R.drawable.imagen_entrada_app_24);[m
+[32m+[m
+[32m+[m[32m        //LinearLayout primera fila[m
+[32m+[m[32m        LinearLayout linear_layout_primera_fila = new LinearLayout(this);[m
+[32m+[m[32m        linear_layout_primera_fila.setOrientation(LinearLayout.HORIZONTAL);[m
+[32m+[m[32m        linear_layout_primera_fila.setGravity(Gravity.FILL);[m
+[32m+[m[32m        linear_layout_primera_fila.setBackgroundColor(Color.WHITE);[m
+[32m+[m[32m        LinearLayout.LayoutParams parametros_primera_fila = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0);//ViewGroup.LayoutParams.WRAP_CONTENT);[m
+[32m+[m[32m        parametros_primera_fila.weight = 8.0f;[m
+[32m+[m[32m        linear_layout_primera_fila.setLayoutParams(parametros_primera_fila);[m
+[32m+[m[32m        linear_layout_primera_fila.setBackgroundDrawable(fondo);[m
+[32m+[m
+[32m+[m[32m        //LinearLayout segunda fila[m
+[32m+[m[32m        LinearLayout linear_layout_segunda_fila = new LinearLayout(this);[m
+[32m+[m[32m        linear_layout_segunda_fila.setOrientation(LinearLayout.HORIZONTAL);[m
+[32m+[m[32m        linear_layout_segunda_fila.setGravity(Gravity.FILL);[m
+[32m+[m[32m        LinearLayout.LayoutParams parametros_segunda_fila = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,0);// ViewGroup.LayoutParams.WRAP_CONTENT);[m
+[32m+[m[32m        parametros_segunda_fila.weight = 2.0f;[m
+[32m+[m[32m        linear_layout_segunda_fila.setWeightSum(2);[m
+[32m+[m[32m        linear_layout_segunda_fila.setLayoutParams(parametros_segunda_fila);[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //pegado botones abajo[m
+[32m+[m[32m        LinearLayout.LayoutParams parametros_pegado_boton = new LinearLayout.LayoutParams(0, android.view.ViewGroup.LayoutParams.MATCH_PARENT);[m
+[32m+[m[32m        parametros_pegado_boton.weight = 1.0f;[m
+[32m+[m[32m        int borde= 10;[m
+[32m+[m[32m        parametros_pegado_boton.setMargins(borde,borde,borde,borde);[m
+[32m+[m[32m        entrar.setLayoutParams(parametros_pegado_boton);[m
+[32m+[m[32m        salir.setLayoutParams(parametros_pegado_boton);[m
+[32m+[m[32m        linear_layout_segunda_fila.addView(entrar);[m
+[32m+[m[32m        linear_layout_segunda_fila.addView(salir);[m
+[32m+[m
+[32m+[m[32m        linear_layout_principal.addView(linear_layout_primera_fila);[m
+[32m+[m[32m        linear_layout_principal.addView(linear_layout_segunda_fila);[m
+[32m+[m
+[32m+[m[32m        return linear_layout_principal;[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    private void eventos(){[m
+[32m+[m
+[32m+[m[32m        //evento[m
+[32m+[m[32m        entrar.setOnClickListener(new View.OnClickListener() {[m
+[32m+[m
+[32m+[m[32m            public void onClick(View v) {[m
+[32m+[m
+[32m+[m[32m                lanzarEntrar();[m
+[32m+[m
+[32m+[m[32m            }[m
+[32m+[m[32m        });[m
+[32m+[m
+[32m+[m[32m        salir.setOnClickListener(new View.OnClickListener() {[m
+[32m+[m
+[32m+[m[32m            public void onClick(View v) {[m
+[32m+[m
+[32m+[m[32m                lanzarSalir();[m
+[32m+[m
+[32m+[m
+[32m+[m[32m            }[m
+[32m+[m[32m        });[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    private void lanzarEntrar(){[m
+[32m+[m
+[32m+[m[32m        Intent intent = new Intent(this, ActividadControladora.class);[m
+[32m+[m[32m        startActivity(intent);[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    private void lanzarSalir(){[m
+[32m+[m
+[32m+[m[32m        this.finish();[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    protected void onStop() {[m
+[32m+[m[32m        //..[m
+[32m+[m[32m        super.onStop();[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    protected void onRestart() {[m
+[32m+[m[32m        super.onRestart();[m
+[32m+[m[32m        //...[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    @Override[m
+[32m+[m[32m    protected void onDestroy() {[m
+[32m+[m[32m        finish();[m
+[32m+[m[32m        super.onDestroy();[m
+[32m+[m[32m    }[m
+[32m+[m
+ }[m
+[1mdiff --git a/modulo_10/MiVigesimaCuartaApp/app/src/main/java/com/curso_simulaciones/mivigesimacuartaapp/controlador/ActividadControladora.java b/modulo_10/MiVigesimaCuartaApp/app/src/main/java/com/curso_simulaciones/mivigesimacuartaapp/controlador/ActividadControladora.java[m
+[1mindex ebda31e..e4d5197 100644[m
+[1m--- a/modulo_10/MiVigesimaCuartaApp/app/src/main/java/com/curso_simulaciones/mivigesimacuartaapp/controlador/ActividadControladora.java[m
+[1m+++ b/modulo_10/MiVigesimaCuartaApp/app/src/main/java/com/curso_simulaciones/mivigesimacuartaapp/controlador/ActividadControladora.java[m
+[36m@@ -1,2 +1,557 @@[m
+[31m-package com.curso_simulaciones.mivigesimacuartaapp.controlador;public class ActividadControladora {[m
+[32m+[m[32mpackage com.curso_simulaciones.mivigesimacuartaapp.controlador;[m
+[32m+[m
+[32m+[m[32mimport android.app.Activity;[m
+[32m+[m[32mimport android.graphics.Color;[m
+[32m+[m[32mimport android.graphics.PorterDuff;[m
+[32m+[m[32mimport android.os.Bundle;[m
+[32m+[m[32mimport android.util.TypedValue;[m
+[32m+[m[32mimport android.view.Gravity;[m
+[32m+[m[32mimport android.view.View;[m
+[32m+[m[32mimport android.view.ViewGroup;[m
+[32m+[m[32mimport android.widget.Button;[m
+[32m+[m[32mimport android.widget.LinearLayout;[m
+[32m+[m[32mimport android.widget.SeekBar;[m
+[32m+[m[32mimport android.widget.TextView;[m
+[32m+[m
+[32m+[m[32mimport com.curso_simulaciones.mivigesimacuartaapp.datos.AlmacenDatosRAM;[m
+[32m+[m[32mimport com.curso_simulaciones.mivigesimacuartaapp.vista.CR;[m
+[32m+[m[32mimport com.curso_simulaciones.mivigesimacuartaapp.vista.Pizarra;[m
+[32m+[m[32mimport com.curso_simulaciones.simulphysics.objetos_laboratorio.Flecha;[m
+[32m+[m[32mimport com.curso_simulaciones.simulphysics.objetos_laboratorio.Marca;[m
+[32m+[m[32mimport com.curso_simulaciones.simulphysics.objetos_laboratorio.ObjetoLaboratorio;[m
+[32m+[m[32mimport com.curso_simulaciones.simulphysics.objetos_laboratorio.Particula;[m
+[32m+[m
+[32m+[m[32mpublic class ActividadControladora extends Activity {[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    //variable tamaño de las letras basado en resolución de pantalla[m
+[32m+[m[32m    private int tamanoLetraResolucionIncluida;[m
+[32m+[m
+[32m+[m[32m    //Objetos GUI necesarios[m
+[32m+[m[32m    private TextView textAceletacion, textVelocidad, textAngulo;[m
+[32m+[m[32m    private SeekBar seekBarAceleracion, seekarVelocidadInicial, seekBarAngulo;[m
+[32m+[m[32m    private Button botonEmpezar, botonPausar;[m
+[32m+[m[32m    private Pizarra pizarra;[m
+[32m+[m
+[32m+[m[32m    //valores de las variables[m
+[32m+[m[32m    private float velocidadInicial;[m
+[32m+[m[32m    private float angulo;[m
+[32m+[m[32m    private float aceleracion;[m
+[32m+[m[32m    private float origenX_en_pixeles, origenY_en_pixeles;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    //objetos[m
+[32m+[m[32m    private Flecha ejeY, ejeX, vectAceleracion, vectVelocidad, vectVelocidadX, vectVelocidadY;[m
+[32m+[m[32m    private Marca marcaEjeX, marcaEjeY;[m
+[32m+[m[32m    private Particula bolita;[m
+[32m+[m
+[32m+[m[32m    //colección de los objetos[m
+[32m+[m[32m    private ObjetoLaboratorio[] objetos = new ObjetoLaboratorio[10];[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    /*Hilo responsable de la animación[m
+[32m+[m[32m     El trabajo de animación es mejor manejarlo en hilo[m
+[32m+[m[32m     aparte para evitar bloqueos de la aplicación[m
+[32m+[m[32m     debido al manejo simultáneo de la GUI con la Acivity[m
+[32m+[m[32m    */[m
+[32m+[m[32m    private HiloAnimacion hilo;[m
+[32m+[m
+[32m+[m[32m    private int i=-1;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    public void onCreate(Bundle savedInstanceState) {[m
+[32m+[m[32m        super.onCreate(savedInstanceState);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        gestionarResolucion();[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //para crear elementos de la GUI[m
+[32m+[m[32m        crearElementosGUI();[m
+[32m+[m
+[32m+[m[32m        //para informar cómo se debe pegar el adminitrador de[m
+[32m+[m[32m        //diseño obtenido con el método GUI[m
+[32m+[m[32m        ViewGroup.LayoutParams parametro_layout_principal = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //pegar el contenedor con la GUI[m
+[32m+[m[32m        this.setContentView(crearGUI(), parametro_layout_principal);[m
+[32m+[m
+[32m+[m[32m        //hilo que administrador los cálculos[m
+[32m+[m[32m        hilo = new HiloAnimacion(this);[m
+[32m+[m[32m        hilo.start();[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //para administrar los eventos[m
+[32m+[m[32m        eventos();[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    }//fin onCreate[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    /*Método auxiliar para asuntos de resolución*/[m
+[32m+[m[32m    private void gestionarResolucion() {[m
+[32m+[m
+[32m+[m[32m        tamanoLetraResolucionIncluida = (int) (0.6f * AlmacenDatosRAM.tamanoLetraResolucionIncluida);[m
+[32m+[m[32m        /*[m
+[32m+[m[32m        Según el diseño de la GUI se puede anticipar cuál es la[m
+[32m+[m[32m        dimensión de la pizarra. En este caso es el 85% del ancho[m
+[32m+[m[32m        de la pantalla y el 100% del alto de la misma[m
+[32m+[m[32m        El cálculo del alto y el ancho de la pantalla[m
+[32m+[m[32m        se hizo en la clase principal con el móvil[m
+[32m+[m[32m        en portrait y aquí estamos en posición lanscape.[m
+[32m+[m[32m        Por tanto troquemos alto por ancho y viceversa[m
+[32m+[m[32m        */[m
+[32m+[m[32m        CR.anchoPizarra = 0.85f * AlmacenDatosRAM.alto_pantalla;[m
+[32m+[m[32m        CR.altoPizarra = AlmacenDatosRAM.ancho_pantalla;[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /*método responsable de la creación de los elementos de la GUI*/[m
+[32m+[m[32m    private void crearElementosGUI() {[m
+[32m+[m
+[32m+[m[32m        textAceletacion = new TextView(this);[m
+[32m+[m[32m        textAceletacion.setTextSize(TypedValue.COMPLEX_UNIT_SP, tamanoLetraResolucionIncluida);[m
+[32m+[m[32m        textAceletacion.setGravity(Gravity.CENTER);[m
+[32m+[m[32m        String marca_aceleracion = "ACELERACION \n -20 a +20";//con salto de línea[m
+[32m+[m[32m        textAceletacion.setTextColor(Color.BLACK);[m
+[32m+[m[32m        textAceletacion.setText(marca_aceleracion);[m
+[32m+[m
+[32m+[m[32m        textVelocidad = new TextView(this);[m
+[32m+[m[32m        textVelocidad.setTextSize(TypedValue.COMPLEX_UNIT_SP, tamanoLetraResolucionIncluida);[m
+[32m+[m[32m        textVelocidad.setGravity(Gravity.CENTER);[m
+[32m+[m[32m        textVelocidad.setTextColor(Color.BLACK);[m
+[32m+[m[32m        String marca_velocidad = "VELOCIDAD \n 0 a +30";//con salto de línea[m
+[32m+[m[32m        textVelocidad.setText(marca_velocidad);[m
+[32m+[m
+[32m+[m[32m        textAngulo = new TextView(this);[m
+[32m+[m[32m        textAngulo.setTextSize(TypedValue.COMPLEX_UNIT_SP, tamanoLetraResolucionIncluida);[m
+[32m+[m[32m        textAngulo.setGravity(Gravity.CENTER);[m
+[32m+[m[32m        textAngulo.setTextColor(Color.BLACK);[m
+[32m+[m[32m        String marca_angulo = "ANGULO gra. \n -90 a +90 ";//con salto de línea[m
+[32m+[m[32m        textAngulo.setText(marca_angulo);[m
+[32m+[m
+[32m+[m[32m        seekBarAceleracion = new SeekBar(this);[m
+[32m+[m[32m        seekBarAceleracion.setMax(40);[m
+[32m+[m[32m        seekBarAceleracion.setProgress(10);//aceleración inicial -10[m
+[32m+[m[32m        seekBarAceleracion.setScaleY(0.2f);[m
+[32m+[m[32m        aceleracion = seekBarAceleracion.getProgress() - 20;[m
+[32m+[m[32m        AlmacenDatosRAM.aceleracion=aceleracion;[m
+[32m+[m
+[32m+[m[32m        seekarVelocidadInicial = new SeekBar(this);[m
+[32m+[m[32m        seekarVelocidadInicial.setMax(30);[m
+[32m+[m[32m        seekarVelocidadInicial.setProgress(20);//velocidad inicial 20[m
+[32m+[m[32m        seekarVelocidadInicial.setScaleY(0.2f);[m
+[32m+[m[32m        velocidadInicial = seekarVelocidadInicial.getProgress();[m
+[32m+[m[32m        AlmacenDatosRAM.vInicial=velocidadInicial;[m
+[32m+[m[32m        AlmacenDatosRAM.velocidad=velocidadInicial;[m
+[32m+[m
+[32m+[m[32m        seekBarAngulo = new SeekBar(this);[m
+[32m+[m[32m        seekBarAngulo.setMax(180);[m
+[32m+[m[32m        seekBarAngulo.setProgress(150);//ángulo inicial -30[m
+[32m+[m[32m        seekBarAngulo.setScaleY(0.2f);[m
+[32m+[m[32m        angulo = seekBarAngulo.getProgress()-90;[m
+[32m+[m[32m        AlmacenDatosRAM.angulo = angulo;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        botonEmpezar = new Button(this);[m
+[32m+[m[32m        botonEmpezar.setTextSize(TypedValue.COMPLEX_UNIT_SP, tamanoLetraResolucionIncluida);[m
+[32m+[m[32m        botonEmpezar.setText("EMPEZAR");[m
+[32m+[m[32m        botonEmpezar.getBackground().setColorFilter(Color.argb(180, 250, 170, 50), PorterDuff.Mode.MULTIPLY);[m
+[32m+[m
+[32m+[m[32m        botonPausar = new Button(this);[m
+[32m+[m[32m        botonPausar.setTextSize(TypedValue.COMPLEX_UNIT_SP, tamanoLetraResolucionIncluida);[m
+[32m+[m[32m        botonPausar.setText("PAUSAR");[m
+[32m+[m[32m        botonPausar.getBackground().setColorFilter(Color.argb(180, 250, 170, 50), PorterDuff.Mode.MULTIPLY);[m
+[32m+[m[32m        botonPausar.setEnabled(false);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //creación del objeto Pizarra[m
+[32m+[m[32m        pizarra = new Pizarra(this);[m
+[32m+[m[32m        //color del tablero[m
+[32m+[m[32m        pizarra.setBackgroundColor(Color.WHITE);[m
+[32m+[m[32m        pizarra.setSistemaCoordenadas(CR.pcApxX(40f),CR.pcApxY(60f),1, -1);[m
+[32m+[m
+[32m+[m[32m        crearObjetosLaboratorio();[m
+[32m+[m
+[32m+[m[32m        estadoInicial();[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    /*método responsable de administrar el diseño de la GUI*/[m
+[32m+[m[32m    private LinearLayout crearGUI() {[m
+[32m+[m
+[32m+[m[32m        LinearLayout linearPrincipal = new LinearLayout(this);[m
+[32m+[m[32m        linearPrincipal.setOrientation(LinearLayout.HORIZONTAL);[m
+[32m+[m[32m        linearPrincipal.setBackgroundColor(Color.BLACK);[m
+[32m+[m[32m        linearPrincipal.setWeightSum(10.0f);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //linear secudario izquierda[m
+[32m+[m[32m        LinearLayout linearIzquierda = new LinearLayout(this);[m
+[32m+[m[32m        //linearIzquierda.setWeightSum(1.0f);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //linear secudario derecha[m
+[32m+[m[32m        LinearLayout linearDerecha = new LinearLayout(this);[m
+[32m+[m[32m        linearDerecha.setOrientation(LinearLayout.VERTICAL);[m
+[32m+[m[32m        linearDerecha.setBackgroundColor(Color.YELLOW);[m
+[32m+[m[32m        linearDerecha.setWeightSum(8.0f);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //pegar estos secundarios al principal[m
+[32m+[m[32m        LinearLayout.LayoutParams parametrosPegadoIzquierda = new LinearLayout.LayoutParams(0, android.view.ViewGroup.LayoutParams.MATCH_PARENT);[m
+[32m+[m[32m        //parametrosPegadoIzquierda.setMargins(0, 5, 0, 5);[m
+[32m+[m[32m        //ocupará el 80% de linear_principal[m
+[32m+[m[32m        parametrosPegadoIzquierda.weight = 8.5f;[m
+[32m+[m[32m        linearPrincipal.addView(linearIzquierda, parametrosPegadoIzquierda);[m
+[32m+[m
+[32m+[m[32m        //pegar la pizarra al linearIzquierdo[m
+[32m+[m[32m        //linearIzquierda.setOrientation(LinearLayout.VERTICAL);[m
+[32m+[m[32m        linearIzquierda.addView(pizarra);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //pegar estos secundarios al princial[m
+[32m+[m[32m        LinearLayout.LayoutParams parametrosPegadoDerecha = new LinearLayout.LayoutParams(0, android.view.ViewGroup.LayoutParams.MATCH_PARENT);[m
+[32m+[m[32m        //ocupará el 20% de linear_principal[m
+[32m+[m[32m        parametrosPegadoDerecha.setMargins(0, 5, 0, 5);[m
+[32m+[m[32m        parametrosPegadoDerecha.weight = 1.5f;[m
+[32m+[m[32m        linearPrincipal.addView(linearDerecha, parametrosPegadoDerecha);[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //pegar componentes a lineardDerecha.[m
+[32m+[m[32m        linearDerecha.setOrientation(LinearLayout.VERTICAL);[m
+[32m+[m[32m        LinearLayout.LayoutParams parametrosPegadoComponentes = new LinearLayout.LayoutParams(android.view.ViewGroup.LayoutParams.MATCH_PARENT, 0);[m
+[32m+[m[32m        //ocupará el 10% de linear_principal[m
+[32m+[m[32m        parametrosPegadoComponentes.setMargins(5, 5, 5, 5);[m
+[32m+[m[32m        parametrosPegadoComponentes.weight = 1.0f;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        linearDerecha.addView(textAngulo, parametrosPegadoComponentes);[m
+[32m+[m[32m        linearDerecha.addView(seekBarAngulo, parametrosPegadoComponentes);[m
+[32m+[m[32m        linearDerecha.addView(textVelocidad, parametrosPegadoComponentes);[m
+[32m+[m[32m        linearDerecha.addView(seekarVelocidadInicial, parametrosPegadoComponentes);[m
+[32m+[m[32m        linearDerecha.addView(textAceletacion, parametrosPegadoComponentes);[m
+[32m+[m[32m        linearDerecha.addView(seekBarAceleracion, parametrosPegadoComponentes);[m
+[32m+[m[32m        linearDerecha.addView(botonEmpezar, parametrosPegadoComponentes);[m
+[32m+[m[32m        linearDerecha.addView(botonPausar, parametrosPegadoComponentes);[m
+[32m+[m
+[32m+[m[32m        return linearPrincipal;[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    }//fin gui[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    private void eventos() {[m
+[32m+[m
+[32m+[m[32m        //evento botones[m
+[32m+[m[32m        botonEmpezar.setOnClickListener(new View.OnClickListener() {[m
+[32m+[m
+[32m+[m[32m            public void onClick(View v) {[m
+[32m+[m
+[32m+[m
+[32m+[m[32m                if (botonEmpezar.getText() == "EMPEZAR") {[m
+[32m+[m
+[32m+[m[32m                    AlmacenDatosRAM.NUEVO=false;[m
+[32m+[m[32m                    //para que la bolita deje el trazo de su trayectoria[m
+[32m+[m[32m                    //desde su posición inicial[m
+[32m+[m[32m                    i=-1;[m
+[32m+[m[32m                    hilo.pausa = false;[m
+[32m+[m[32m                    botonEmpezar.setText("NUEVO");[m
+[32m+[m[32m                    seekBarAceleracion.setEnabled(false);[m
+[32m+[m[32m                    seekBarAngulo.setEnabled(false);[m
+[32m+[m[32m                    seekarVelocidadInicial.setEnabled(false);[m
+[32m+[m[32m                    botonPausar.setEnabled(true);[m
+[32m+[m[32m                    hilo.tiempo = 0;[m
+[32m+[m[32m                    botonPausar.setText("PAUSAR");[m
+[32m+[m
+[32m+[m[32m                } else {[m
+[32m+[m
+[32m+[m[32m                    AlmacenDatosRAM.NUEVO=true;[m
+[32m+[m[32m                    botonEmpezar.setText("EMPEZAR");[m
+[32m+[m[32m                    seekBarAceleracion.setEnabled(true);[m
+[32m+[m[32m                    seekBarAngulo.setEnabled(true);[m
+[32m+[m[32m                    seekarVelocidadInicial.setEnabled(true);[m
+[32m+[m[32m                    botonPausar.setEnabled(false);[m
+[32m+[m[32m                    estadoInicial();[m
+[32m+[m[32m                    hilo.pausa = true;[m
+[32m+[m
+[32m+[m[32m                }[m
+[32m+[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m        });[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //evento del boton activar[m
+[32m+[m[32m        botonPausar.setOnClickListener(new View.OnClickListener() {[m
+[32m+[m
+[32m+[m[32m            public void onClick(View v) {[m
+[32m+[m
+[32m+[m[32m                if (botonPausar.getText() == "PAUSAR") {[m
+[32m+[m
+[32m+[m[32m                    botonPausar.setText("CONTINUAR");[m
+[32m+[m[32m                    hilo.pausa = true;[m
+[32m+[m
+[32m+[m[32m                } else {[m
+[32m+[m
+[32m+[m
+[32m+[m[32m                    botonPausar.setText("PAUSAR");[m
+[32m+[m[32m                    hilo.pausa = false;[m
+[32m+[m
+[32m+[m[32m                }[m
+[32m+[m
+[32m+[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m        });[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        //eventos seekbar[m
+[32m+[m
+[32m+[m[32m        // seek_bar_velocidad_inicial[m
+[32m+[m[32m        seekarVelocidadInicial.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {[m
+[32m+[m[32m            int progressChanged = 0;[m
+[32m+[m
+[32m+[m[32m            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {[m
+[32m+[m
+[32m+[m[32m                int progressChanged = progress;[m
+[32m+[m[32m                velocidadInicial = progressChanged;//0 el valor mínimo[m
+[32m+[m[32m                //nuevas condiciones iniciales de la escena[m
+[32m+[m[32m                estadoInicial();[m
+[32m+[m
+[32m+[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m            public void onStartTrackingTouch(SeekBar seekBar) {[m
+[32m+[m[32m                // TODO Auto-generated method stub[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m            public void onStopTrackingTouch(SeekBar seekBar) {[m
+[32m+[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m        });[m
+[32m+[m
+[32m+[m[32m        // seek_bar_angulo[m
+[32m+[m[32m        seekBarAngulo.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {[m
+[32m+[m[32m            int progressChanged = 0;[m
+[32m+[m
+[32m+[m[32m            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {[m
+[32m+[m[32m                int progressChanged = progress;[m
+[32m+[m
+[32m+[m[32m                //-90 será el valor mínimo y +90 el valor máximo[m
+[32m+[m[32m                angulo = progressChanged -90;[m
+[32m+[m
+[32m+[m[32m                //condiciones iniciales de la animación[m
+[32m+[m[32m                estadoInicial();[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m            public void onStartTrackingTouch(SeekBar seekBar) {[m
+[32m+[m[32m                // TODO Auto-generated method stub[m
+[32m+[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m            public void onStopTrackingTouch(SeekBar seekBar) {[m
+[32m+[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m        });[m
+[32m+[m
+[32m+[m
+[32m+[m[32m        // seek_bar_aceleración[m
+[32m+[m[32m        seekBarAceleracion.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {[m
+[32m+[m[32m            int progressChanged = 0;[m
+[32m+[m
+[32m+[m[32m            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {[m
+[32m+[m[32m                progressChanged = progress;[m
+[32m+[m
+[32m+[m[32m                //-20 será el valor mínimo y +20 el máximo[m
+[32m+[m[32m                aceleracion = (progressChanged) - 20;[m
+[32m+[m[32m                estadoInicial();[m
+[32m+[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m            public void onStartTrackingTouch(SeekBar seekBar) {[m
+[32m+[m[32m                // TODO Auto-generated method stub[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m            public void onStopTrackingTouch(SeekBar seekBar) {[m
+[32m+[m
+[32m+[m[32m            }[m
+[32m+[m
+[32m+[m[32m        });[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    private void crearObjetosLaboratorio() {[m
+[32m+[m
+[32m+[m[32m        //origen en pixeles[m
+[32m+[m[32m        float origenX_en_pixeles = CR.pcApxX(10);[m
+[32m+[m[32m        float origenY_en_pixeles = CR.pcApxY(50);[m
+[32m+[m[32m        //almacenar origen en pixeles[m
+[32m+[m[32m        AlmacenDatosRAM.origenX_en_pixeles = origenX_en_pixeles;[m
+[32m+[m[32m        AlmacenDatosRAM.origenY_en_pixeles = origenY_en_pixeles;[m
+[32m+[m
+[32m+[m[32m        //posición inicial en pixeles[m
+[32m+[m[32m        //posición en pixeles en coordenadas pantalla[m
+[32m+[m[32m        float xi_en_pixeles = CR.pcApxX(0);[m
+[32m+[m[32m        float yi_en_pixeles = CR.pcApxY(0);[m
+[32m+[m[32m        //almacenar en pixeles[m
+[32m+[m[32m        AlmacenDatosRAM.xi_en_pixeles = xi_en_pixeles;[m
+[32m+[m[32m        AlmacenDatosRAM.yi_en_pixeles = yi_en_pixeles;[m
+[32m+[m
+[32m+[m[32m        //crear eje x[m
+[32m+[m[32m        ejeX = new Flecha(0, 0, CR.pcApxL(30f));[m
+[32m+[m[32m        ejeX.setColor(Color.BLACK);[m
+[32m+[m[32m        ejeX.setGrosorLinea(CR.pcApxL(0.5f));[m
+[32m+[m[32m        objetos[0] = ejeX;[m
+[32m+[m
+[32m+[m[32m        //crear eje y[m
+[32m+[m[32m        ejeY = new Flecha(0, 0, CR.pcApxL(30f));[m
+[32m+[m[32m        ejeY.setColor(Color.BLACK);[m
+[32m+[m[32m        ejeY.setGrosorLinea(CR.pcApxL(0.5f));[m
+[32m+[m[32m        ejeY.rotar(90);[m
+[32m+[m[32m        objetos[1] = ejeY;[m
+[32m+[m
+[32m+[m[32m        //los vectores inicialmente longitud cero[m
+[32m+[m[32m        vectAceleracion = new Flecha(xi_en_pixeles, yi_en_pixeles, CR.pcApxL(1.0f));[m
+[32m+[m[32m        vectAceleracion.setGrosorLinea(CR.pcApxL(0.5f));[m
+[32m+[m[32m         /*[m
+[32m+[m[32m         factor de amplificación de la longitud del vector[m
+[32m+[m[32m         para ver de buen tamaño el vector[m
+[32m+[m[32m         */[m
+[32m+[m[32m        float factor_aceleracion = CR.pcApxL(1.5f);[m
+[32m+[m[32m        vectAceleracion.setLongitud(factor_aceleracion * AlmacenDatosRAM.aceleracion);[m
+[32m+[m[32m        vectAceleracion.setColor(Color.BLUE);[m
+[32m+[m[32m        vectAceleracion.rotar(90);[m
+[32m+[m[32m        objetos[2] = vectAceleracion;[m
+[32m+[m
+[32m+[m[32m        //crear velocidad[m
+[32m+[m[32m        vectVelocidad = new Flecha(xi_en_pixeles, yi_en_pixeles, CR.pcApxL(1.0f));[m
+[32m+[m[32m        vectVelocidad.setGrosorLinea(CR.pcApxL(0.5f));[m
+[32m+[m[32m        //float anguloVelocidadGrados = (float) Math.toDegrees(angulo);//AlmacenDatosRAM.anguloVelocidad);[m
+[32m+[m[32m        vectVelocidad.rotar(angulo);//anguloVelocidadGrados);[m
+[32m+[m[32m         /*[m
+[32m+[m[32m         factor de amplificación de la longitud del vector[m
+[32m+[m[32m         para ver de buen tamaño el vector[m
+[32m+[m[32m         */[m
+[32m+[m[32m        float factor_velocidad = CR.pcApxL(0.8f);[m
+[32m+[m[32m        vectVelocidad.setLongitud(factor_velocidad * AlmacenDatosRAM.velocidad);[m
+[32m+[m[32m        vectVelocidad.setColor(Color.RED);[m
+[32m+[m[32m        objetos[3] = vectVelocidad;[m
+[32m+[m
+[32m+[m[32m        //crear velocidad x[m
+[32m+[m[32m        vectVelocidadX = new Flecha(xi_en_pixeles, yi_en_pixeles, CR.pcApxL(1.0f));[m
+[32m+[m[32m        vectVelocidadX.setGrosorLinea(CR.pcApxL(0.5f));[m
+[32m+[m[32m        vectVelocidadX.setLongitud(factor_velocidad * AlmacenDatosRAM.velocidadX);[m
+[32m+[m[32m        vectVelocidadX.setColor(Color.MAGENTA);[m
+[32m+[m[32m        objetos[4] = vectVelocidadX;[m
+[32m+[m
+[32m+[m[32m        //crear velocidad y[m
+[32m+[m[32m        vectVelocidadY = new Flecha(xi_en_pixeles, yi_en_pixeles, CR.pcApxL(1.0f));[m
+[32m+[m[32m        vectVelocidadY.setGrosorLinea(CR.pcApxL(0.5f));[m
+[32m+[m[32m        vectVelocidadY.setLongitud(factor_velocidad * AlmacenDatosRAM.velocidadY);[m
+[32m+[m[32m        vectVelocidadY.setColor(Color.rgb(0, 128, 0));[m
+[32m+[m[32m        vectVelocidadY.rotar(-90);[m
+[32m+[m[32m        objetos[5] = vectVelocidadY;[m
+[32m+[m
+[32m+[m[32m        //crear bola[m
+[32m+[m[32m        bolita = new Particula(xi_en_pixeles, yi_en_pixeles, CR.pcApxL(10.0f));[m
+[32m+[m[32m        bolita.setRadio(CR.pcApxL(2f));[m
+[32m+[m[32m        bolita.setColor(Color.rgb(200, 0, 0));[m
+[32m+[m[32m        objetos[6] = bolita;[m
+[32m+[m
+[32m+[m[32m        //marcar ejes[m
+[32m+[m[32m        marcaEjeX = new Marca("Eje X",  CR.pcApxX(10f),  CR.pcApxY(4f));[m
+[32m+[m[32m        marcaEjeX.setTamano(CR.pcApxL(3f));[m
+[32m+[m[32m        objetos[7] = marcaEjeX;[m
+[32m+[m
+[32m+[m[32m        //marcar ejes[m
+[32m+[m[32m        marcaEjeY = new Marca("Eje Y",  - CR.pcApxX(2f),  CR.pcApxY(25f));[m
+[32m+[m[32m        marcaEjeY.setTamano(CR.pcApxL(3f));[m
+[32m+[m[32m        marcaEjeY.rotar(-90f);[m
+[32m+[m[32m        objetos[8] = marcaEjeY;[m
+[32m+[m
+[32m+[m[32m        //estado inicial de la escena[m
+[32m+[m[32m        pizarra.setEstadoEscena(objetos);[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    public void cambiarEstadosEscenaPizarra() {[m
+[32m+[m
+[32m+[m[32m        //se obtienen los valores de las variables[m
+[32m+[m[32m        float x_en_pixeles = AlmacenDatosRAM.x_en_pixeles;[m
+[32m+[m[32m        float y_en_pixeles = AlmacenDatosRAM.y_en_pixeles;[m
+[32m+[m[32m        float v = AlmacenDatosRAM.velocidad;[m
+[32m+[m[32m        float vX = AlmacenDatosRAM.velocidadX;[m
+[32m+[m[32m        float vY = AlmacenDatosRAM.velocidadY;[m
+[32m+[m[32m        float anguloVelocidad = AlmacenDatosRAM.anguloVelocidad;//en radianes[m
+[32m+[m[32m        float a = AlmacenDatosRAM.aceleracion;[m
+[32m+[m
+[32m+[m[32m        //actualizar la escena[m
+[32m+[m[32m        vectVelocidad.setPosicion(x_en_pixeles, y_en_pixeles);[m
+[32m+[m[32m        float factor_velocidad = CR.pcApxL(0.8f);[m
+[32m+[m[32m        vectVelocidad.setLongitud(factor_velocidad * v);[m
+[32m+[m[32m        //el ángulo está en radianes y se debe convertir a grados[m
+[32m+[m[32m        vectVelocidad.rotar((float) Math.toDegrees(anguloVelocidad));[m
+[32m+[m
+[32m+[m[32m        vectVelocidadX.setLongitud(factor_velocidad * vX);[m
+[32m+[m[32m        vectVelocidadX.setPosicion(x_en_pixeles, y_en_pixeles);[m
+[32m+[m
+[32m+[m[32m        vectVelocidadY.setLongitud(factor_velocidad * vY);[m
+[32m+[m[32m        vectVelocidadY.setPosicion(x_en_pixeles, y_en_pixeles);[m
+[32m+[m[32m        vectVelocidadY.rotar(90);[m
+[32m+[m
+[32m+[m[32m        float factor_aceleracion = CR.pcApxL(1.5f);[m
+[32m+[m[32m        vectAceleracion.setLongitud(factor_aceleracion * a);[m
+[32m+[m[32m        vectAceleracion.setPosicion(x_en_pixeles, y_en_pixeles);[m
+[32m+[m
+[32m+[m[32m        bolita.setPosicion(x_en_pixeles, y_en_pixeles);[m
+[32m+[m[32m        bolita.setColorTrayectoria(Color.rgb(250, 180, 0));[m
+[32m+[m[32m        i = i + 1;//necesario para ir dibujando la trayectoria[m
+[32m+[m[32m        bolita.setTrayectoria(true, i);[m
+[32m+[m[32m        bolita.setGrosorLinea(CR.pcApxL(0.6f));[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    private void estadoInicial(){[m
+[32m+[m
+[32m+[m[32m        AlmacenDatosRAM.aceleracion = aceleracion;[m
+[32m+[m[32m        AlmacenDatosRAM.angulo = angulo;[m
+[32m+[m[32m        AlmacenDatosRAM.vInicial = velocidadInicial;[m
+[32m+[m[32m        AlmacenDatosRAM.velocidad= velocidadInicial;[m
+[32m+[m[32m        AlmacenDatosRAM.velocidadX = (float)(velocidadInicial*Math.cos(Math.toRadians(angulo)));[m
+[32m+[m[32m        AlmacenDatosRAM.velocidadY = (float)(velocidadInicial*Math.sin(Math.toRadians(angulo)));[m
+[32m+[m
+[32m+[m[32m        float x_i= AlmacenDatosRAM.xi_en_pixeles;[m
+[32m+[m[32m        float y_i= AlmacenDatosRAM.yi_en_pixeles;[m
+[32m+[m[32m        i=-1;[m
+[32m+[m[32m        bolita.borrarDatos();[m
+[32m+[m[32m        bolita.setPosicion(x_i, y_i);[m
+[32m+[m[32m        vectAceleracion.setPosicion(x_i,y_i);[m
+[32m+[m[32m        /*[m
+[32m+[m[32m         factor de amplificación de la longitud del vector[m
+[32m+[m[32m         para ver de buen tamaño el vector[m
+[32m+[m[32m         */[m
+[32m+[m[32m        float factor_aceleracion = CR.pcApxL(1.5f);[m
+[32m+[m[32m        vectAceleracion.setLongitud(factor_aceleracion*aceleracion);[m
+[32m+[m[32m        /*[m
+[32m+[m[32m         factor de amplificación de la longitud del vector[m
+[32m+[m[32m         para ver de buen tamaño el vector[m
+[32m+[m[32m         */[m
+[32m+[m[32m        float factor_velocidad = CR.pcApxL(0.8f);[m
+[32m+[m[32m        vectVelocidad.setLongitud(factor_velocidad * velocidadInicial);[m
+[32m+[m[32m        vectVelocidad.setPosicion(x_i, y_i);[m
+[32m+[m[32m        vectVelocidad.rotar(angulo);[m
+[32m+[m[32m        //borrar las componentes[m
+[32m+[m[32m        vectVelocidadX.setLongitud(0f);[m
+[32m+[m[32m        vectVelocidadY.setLongitud(0f);[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m
+ }[m
+[1mdiff --git a/modulo_10/MiVigesimaCuartaApp/app/src/main/java/com/curso_simulaciones/mivigesimacuartaapp/controlador/HiloAnimacion.java b/modulo_10/MiVigesimaCuartaApp/app/src/main/java/com/curso_simulaciones/mivigesimacuartaapp/controlador/HiloAnimacion.java[m
+[1mindex 7c1880d..116a2b6 100644[m
+[1m--- a/modulo_10/MiVigesimaCuartaApp/app/src/main/java/com/curso_simulaciones/mivigesimacuartaapp/controlador/HiloAnimacion.java[m
+[1m+++ b/modulo_10/MiVigesimaCuartaApp/app/src/main/java/com/curso_simulaciones/mivigesimacuartaapp/controlador/HiloAnimacion.java[m
+[36m@@ -1,2 +1,61 @@[m
+[31m-package com.curso_simulac
