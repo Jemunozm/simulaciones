@@ -187,7 +187,7 @@ public class ActividadControladora extends Activity {
 
 
         //4  cuerdas
-        cuerda_1=new Cuerda(xp1-radio,yp1, xp1-radio,CR.pcApxY(60));
+        cuerda_1=new Cuerda(xp1-radio,yp1, xp1-radio,yp1+(12.5f*radio)-(alto_bloque/2));
         cuerda_1.setColor(Color.BLACK);
         cuerda_1.setGrosorLinea(CR.pcApxL(0.3f));
         objetos[0]=cuerda_1;
@@ -203,12 +203,12 @@ public class ActividadControladora extends Activity {
         objetos[2]=cuerda_3;
 
 
-        cuerda_4=new Cuerda(xp3+radio,yp3,xp3+radio,yp3+(5*radio));
+        cuerda_4=new Cuerda(xp3+radio,yp3,xp3+radio,yp3+(5*radio)-(alto_bloque/2));
         cuerda_4.setColor(Color.BLACK);
         cuerda_4.setGrosorLinea(CR.pcApxL(0.3f));
         objetos[3]=cuerda_4;
 
-        cuerda_5=new Cuerda(xp3-radio,yp3,xp3-radio,yp3+(8*radio));
+        cuerda_5=new Cuerda(xp3-radio,yp3,xp3-radio,yp3+(8*radio)-(alto_bloque/2));
         cuerda_5.setColor(Color.BLACK);
         cuerda_5.setGrosorLinea(CR.pcApxL(0.3f));
         objetos[5]=cuerda_5;
@@ -219,7 +219,6 @@ public class ActividadControladora extends Activity {
         //masa 1
         masa_1=new Masa(x1,y1,ancho_bloque,alto_bloque);
         masa_1.setColor(Color.rgb(199, 0, 145));
-        masa_1.setColorMarca(Color.BLACK);
         objetos[11]=masa_1;
 
         marca1 = new Marca("m1", x1-2*radio,y1+CR.pcApxL(1f));
