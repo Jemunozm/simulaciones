@@ -26,35 +26,25 @@ public class ModeloFisico {
       angular de las poleas
 
      */
-    public void setCalculos(float tiempo, float m1, float m2, float m3 ) {
+    public void setCalculos(float tiempo, float m1, float m2, float m3) {
 
         factorConversion();
 
 
-
-        float mP3 = m2+m3;
-
-        float A = ((m2-m3) / (m2+m3)) * g;
-
-        float a = ((m1-mP3) / (mP3+m1)) * g;
-
-
         //cálculo de la tensión en la cuerda 1 y 2
-        float F = ((2*mP3*m1) / (m1 + mP3)) * g;
+        float F1 = ((4 * (m1 * m2 * m3)) / ((4 * (m2 * m3)) + (m1 * m3) + (m1 * m2))) * g;
 
-        float F1 = ((2*m3*m2) / (m2+m3)) * g;
+        float F = ((8 * (m1 * m2 * m3)) / ((4 * (m2 * m3)) + (m1 * m3) + (m1 * m2))) * g;
 
         //aceleraciones de m1 y mP3 en m/s^^2
-        float a1 = a;
-        float aP3 = -a;
-        //aceleraciones de m2 y m3 en m/s^^2
-        float a2 = A+aP3;
-        float a3 = -A+aP3;
+        float a1 = -(F/m1)+g;
+        float a2 = -(F1/m2)+g;
+        float a3 = -(F1/m3)+g;
 
 
         //desplazamiento de las masas en metros
         float desplazamiento_m1_en_metros = 0.5f * a1 * tiempo * tiempo;
-        float desplazamiento_mP3_en_metros = 0.5f * aP3 * tiempo * tiempo;
+        float desplazamiento_mP3_en_metros = 0.5f * -a1 * tiempo * tiempo;
         float desplazamiento_m2_en_metros = 0.5f * a2 * tiempo * tiempo;
         float desplazamiento_m3_en_metros = 0.5f * a3 * tiempo * tiempo;
 
@@ -99,15 +89,13 @@ public class ModeloFisico {
         float teta_1 = -(float) (Math.toDegrees(desplazamiento_m1_en_pixeles / AlmacenDatosRAM.radio));
         float teta_2 = teta_1;
         float teta_3;
-        if (desplazamiento_m2_en_pixeles>desplazamiento_m3_en_pixeles){
+        if (desplazamiento_m2_en_pixeles > desplazamiento_m3_en_pixeles) {
             teta_3 = -(float) (Math.toDegrees(desplazamiento_m2_en_pixeles / AlmacenDatosRAM.radio));
-        }else if(desplazamiento_m2_en_pixeles<desplazamiento_m3_en_pixeles){
+        } else if (desplazamiento_m2_en_pixeles < desplazamiento_m3_en_pixeles) {
             teta_3 = (float) (Math.toDegrees(desplazamiento_m3_en_pixeles / AlmacenDatosRAM.radio));
-        }else{
-            teta_3=0;
+        } else {
+            teta_3 = 0;
         }
-
-
 
 
         AlmacenDatosRAM.y1_en_metros = factorConversion_pixelAmetro * y1_en_pixeles;
@@ -117,7 +105,7 @@ public class ModeloFisico {
 
         //enviar resultados a AlmacenDatosRAM
         AlmacenDatosRAM.a1 = a1;
-        AlmacenDatosRAM.aP3 = aP3;
+        AlmacenDatosRAM.aP3 = -a1;
         AlmacenDatosRAM.a2 = a2;
         AlmacenDatosRAM.a3 = a3;
         AlmacenDatosRAM.teta_1 = teta_1;
@@ -154,7 +142,6 @@ public class ModeloFisico {
         factorConversion_pixelAmetro = 2 / CR.pcApxY(100f);
 
     }
-
 
 
 }

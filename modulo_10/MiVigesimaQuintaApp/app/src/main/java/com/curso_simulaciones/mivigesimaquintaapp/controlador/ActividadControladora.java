@@ -143,6 +143,8 @@ public class ActividadControladora extends Activity {
         seek_bar_m1 = new SeekBar(this);
         seek_bar_m1.setMax(20);
         seek_bar_m1.setProgress(15);//masa m1 inicial 15
+        seek_bar_m1.getThumb().setColorFilter(Color.rgb(72, 201, 176), PorterDuff.Mode.MULTIPLY);
+
         AlmacenDatosRAM.m1 = 15;
         seek_bar_m1.setScaleY(0.5f);
 
@@ -150,6 +152,8 @@ public class ActividadControladora extends Activity {
         seek_bar_m2 = new SeekBar(this);
         seek_bar_m2.setMax(20);
         seek_bar_m2.setProgress(10);//masa m2 inicial 10
+        seek_bar_m2.getThumb().setColorFilter(Color.rgb(72, 201, 176), PorterDuff.Mode.MULTIPLY);
+
         AlmacenDatosRAM.m2 = 10;
         seek_bar_m2.setScaleY(0.5f);
 

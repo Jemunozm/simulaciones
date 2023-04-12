@@ -10,8 +10,61 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8b6a14ec-aa66-4ae5-a241-40d82db610ff" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../MiVigesimaSextaApp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MiVigesimaSextaApp/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../modulo_8/MiDecimaOctavaApp/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../modulo_8/MiDecimaOctavaApp/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/androidTest/java/com/curso_simulaciones/mivigesimanovenaapp/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/java/com/curso_simulaciones/mivigesimanovenaapp/ActividadPrincipalMiVigesimaNovenaApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/java/com/curso_simulaciones/mivigesimanovenaapp/actividades_secundarias/ActividadDesplegadoraDatos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/java/com/curso_simulaciones/mivigesimanovenaapp/actividades_secundarias/HiloAnimacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/java/com/curso_simulaciones/mivigesimanovenaapp/datos/AlmacenDatosRAM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/java/com/curso_simulaciones/mivigesimanovenaapp/utilidades/Boton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/java/com/curso_simulaciones/mivigesimanovenaapp/utilidades/GaugeSimple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/java/com/curso_simulaciones/mivigesimanovenaapp/utilidades/Gaussimetro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/java/com/curso_simulaciones/mivigesimanovenaapp/utilidades/Graficador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-anydpi-v33/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-hdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-mdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/xml/backup_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/main/res/xml/data_extraction_rules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/app/src/test/java/com/curso_simulaciones/mivigesimanovenaapp/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MiVigesimaNovenaApp/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo_10/MiVigesimaQuintaApp/app/src/main/java/com/curso_simulaciones/mivigesimaquintaapp/controlador/ActividadControladora.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../modulo_10/MiVigesimaQuintaApp/app/src/main/java/com/curso_simulaciones/mivigesimaquintaapp/controlador/ActividadControladora.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo_10/MiVigesimaQuintaApp/app/src/main/java/com/curso_simulaciones/mivigesimaquintaapp/modelo/ModeloFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../modulo_10/MiVigesimaQuintaApp/app/src/main/java/com/curso_simulaciones/mivigesimaquintaapp/modelo/ModeloFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo_10/MiVigesimaQuintaApp/app/src/main/res/drawable/entrar.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../modulo_10/MiVigesimaQuintaApp/app/src/main/res/drawable/entrar.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo_10/MiVigesimaQuintaApp/app/src/main/res/drawable/imagen_entrada_app_23.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../modulo_10/MiVigesimaQuintaApp/app/src/main/res/drawable/imagen_entrada_app_23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modulo_10/MiVigesimaQuintaApp/app/src/main/res/drawable/salir.png" beforeDir="false" afterPath="$PROJECT_DIR$/../../modulo_10/MiVigesimaQuintaApp/app/src/main/res/drawable/salir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +95,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
-    "cidr.known.project.marker": "true"
+    "cidr.known.project.marker": "true",
+    "last_opened_file_path": "D:/University/2023-1/Simulaciones/modulo_11/MiVigesimaSextaApp"
   }
 }]]></component>
   <component name="RecentsManager">
