@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MiTrigesimaQuintaApp"
+        tools:targetApi="31" >
+
+        <activity android:name=".ActividadPrincipalMiTrigesimaQuintaApp"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <!--declarando otra actividad-->
+
+        <!--declarando otra actividad-->
+        <activity android:name=".actividades_secundarias.ActividadComunicacion"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--declarando otra actividad-->
+
+        <!--declarando otra actividad-->
+        <activity android:name=".actividades_secundarias.ActividadComoClienteBluetooth"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--declarando otra actividad-->
+        <activity android:name=".actividades_secundarias.ActividadComoServidorBluetooth"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <!--declarando otra actividad-->
+        <activity android:name=".actividades_secundarias.ActividadEscaneoDispositivos"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+
+        <!--declarando otra actividad-->
+
+    </application>
+
+    <!-- Permiso para muestreo alto de los sensores a partir de Android 12.-->
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS"/>
+
+    <!-- Permisos adicionales para usar bluetooth antes de Android 12 ).-->
+    <uses-permission android:name="android.permission.BLUETOOTH"  tools:remove="android:maxSdkVersion" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <!-- Permisos adicionales para usar bluetooth a partir de Android 12.-->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADVERTISE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
+
+</manifest>
